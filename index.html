@@ -1,1 +1,72 @@
-<FILE_CONTENTS_PLACEHOLDER>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="calculator.css" />
+</head>
+<body>
+  <main class="calc-page">
+    <header class="calc-header">
+      <h1>Calculadora</h1>
+      <div class="theme-toggle" role="group" aria-label="Tema">
+        <button id="theme-btn" title="Alternar tema" aria-label="Alternar tema">🌙</button>
+      </div>
+    </header>
+
+    <section class="calc-wrapper">
+      <aside class="history" aria-label="Histórico">
+        <div class="history-header">
+          <span>Histórico</span>
+          <button id="clear-history" class="link">limpar</button>
+        </div>
+        <ul id="history-list"></ul>
+      </aside>
+
+      <section class="calculator" aria-label="Calculadora">
+        <div class="display">
+          <div id="expr" class="expr" aria-live="polite">&nbsp;</div>
+          <div id="result" class="result" aria-live="polite">0</div>
+        </div>
+
+        <div class="keys" role="grid">
+          <button data-key="Escape" class="key key-func">AC</button>
+          <button data-key="Backspace" class="key key-func">⌫</button>
+          <button data-key="%" class="key key-op">%</button>
+          <button data-key="/" class="key key-op">÷</button>
+
+          <button data-key="7" class="key">7</button>
+          <button data-key="8" class="key">8</button>
+          <button data-key="9" class="key">9</button>
+          <button data-key="*" class="key key-op">×</button>
+
+          <button data-key="4" class="key">4</button>
+          <button data-key="5" class="key">5</button>
+          <button data-key="6" class="key">6</button>
+          <button data-key="-" class="key key-op">−</button>
+
+          <button data-key="1" class="key">1</button>
+          <button data-key="2" class="key">2</button>
+          <button data-key="3" class="key">3</button>
+          <button data-key="+" class="key key-op">+</button>
+
+          <button data-key="swap" class="key">±</button>
+          <button data-key="0" class="key">0</button>
+          <button data-key="," class="key">,</button>
+          <button data-key="Enter" class="key key-eq">=</button>
+        </div>
+      </section>
+    </section>
+
+    <footer class="calc-footer">
+      <small>Suporte a teclado: números, + − × ÷, %, vírgula, Enter, Backspace, Esc.</small>
+    </footer>
+  </main>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
